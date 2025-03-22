@@ -26,21 +26,10 @@
 
 \title{Instructions for Authors of SBC Conferences\\ Papers and Abstracts}
 
-\author{Luciana P. Nedel\inst{1}, Rafael H. Bordini\inst{2}, Flávio Rech
-  Wagner\inst{1}, Jomi F. Hübner\inst{3} }
+\author{Guilherme Fernandes Moraes da Silva\inst{1}, Daniel Cordeiro\inst{1}}
 
-
-\address{Instituto de Informática -- Universidade Federal do Rio Grande do Sul
-  (UFRGS)\\
-  Caixa Postal 15.064 -- 91.501-970 -- Porto Alegre -- RS -- Brazil
-\nextinstitute
-  Department of Computer Science -- University of Durham\\
-  Durham, U.K.
-\nextinstitute
-  Departamento de Sistemas e Computação\\
-  Universidade Regional de Blumenal (FURB) -- Blumenau, SC -- Brazil
-  \email{\{nedel,flavio\}@inf.ufrgs.br, R.Bordini@durham.ac.uk,
-  jomi@inf.furb.br}
+\address{Escola de Artes, Ciências e Humanidades -- Universidade de São Paulo (USP)\\ -- São Paulo, SP -- Brasil
+  \email{\{guilherme.fernandes01,daniel.cordeiro\}@usp.br}
 }
 
 \begin{document} 
@@ -48,35 +37,20 @@
 \maketitle
 
 \begin{abstract}
-  This meta-paper describes the style to be used in articles and short papers
-  for SBC conferences. For papers in English, you should add just an abstract
-  while for the papers in Portuguese, we also ask for an abstract in
-  Portuguese (``resumo''). In both cases, abstracts should not have more than
-  10 lines and must be in the first page of the paper.
+Cloud computing has expanded its capacity through geo-distributed data centers, which, however, entail high energy consumption and increased greenhouse gas emissions. In this work, we investigate, through simulation, various scheduling algorithms applied to geo-distributed data centers with the objective of reducing environmental impact. It is expected that experiments using simulators will provide a foundation for the implementation of strategies that promote energy savings and minimize emissions.
 \end{abstract}
      
-\begin{resumo} 
-  Este meta-artigo descreve o estilo a ser usado na confecção de artigos e
-  resumos de artigos para publicação nos anais das conferências organizadas
-  pela SBC. É solicitada a escrita de resumo e abstract apenas para os artigos
-  escritos em português. Artigos em inglês deverão apresentar apenas abstract.
-  Nos dois casos, o autor deve tomar cuidado para que o resumo (e o abstract)
-  não ultrapassem 10 linhas cada, sendo que ambos devem estar na primeira
-  página do artigo.
+\begin{resumo}
+A computação em nuvem tem ampliado sua capacidade por meio de \textit{data centers} geodistribuídos, os quais, entretanto, implicam um elevado consumo energético e aumento nas emissões de gases do efeito estufa. Neste trabalho, investigamos por meio de simulação de diferentes algoritmos de escalonamento aplicados a \textit{data centers} geodistribuídos, com o objetivo de reduzir o impacto ambiental. Espera-se que os experimentos com simuladores forneçam subsídios para a implementação de estratégias que promovam a economia de energia e a minimização das emissões.
 \end{resumo}
 
 
-\section{General Information}
+\section{Introdução}
+Atualmente, os \textit{data centers} representam aproximadamente 1\% do consumo energético global e, juntamente com as redes de transmissão de dados, respondem por cerca de 1\% das emissões de gases do efeito estufa associadas à energia, fenômeno potencializado pelos expressivos aumentos no armazenamento e na carga de trabalho desses centros \cite{masanet:20}. Segundo a International Energy Agency (IEA), os dois maiores consumidores de energia do mundo -- China e Estados Unidos -- registraram elevações na demanda energética impulsionadas pelo crescimento dos \textit{data centers}. Em 2024, esses países foram responsáveis por mais da metade do consumo energético global. Projeções\footnote{https://www.iea.org/reports/electricity-2025} indicam que, na China, o consumo de energia dos \textit{data centers} poderá dobrar até 2027. Já nos Estados Unidos, os \textit{data centers} consumiram 176 TWh em 2023, representando 4,4\% do consumo total do país, com estimativas\footnote{https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf} sugerindo que esse valor pode crescer para uma faixa entre 325 e 580 TWh em 2028, correspondendo a 6,7\% a 12\% do consumo total do país.
 
-All full papers and posters (short papers) submitted to some SBC conference,
-including any supporting documents, should be written in English or in
-Portuguese. The format paper should be A4 with single column, 3.5 cm for upper
-margin, 2.5 cm for bottom margin and 3.0 cm for lateral margins, without
-headers or footers. The main font must be Times, 12 point nominal size, with 6
-points of space before each paragraph. Page numbers must be suppressed.
+Uma estratégia promissora para mitigar as emissões de gases do efeito estufa nos \textit{data centers} consiste no desenvolvimento de algoritmos de escalonamento eficientes, voltados para a minimização dessas emissões. Para tal, simuladores são amplamente utilizados, pois oferecem uma plataforma controlada que possibilita a modelagem precisa do comportamento dos sistemas. Essa abordagem permite testar diferentes cenários e configurações, avaliando o impacto de diversos algoritmos de escalonamento e facilitando a implementação de melhorias que otimizem o desempenho e a sustentabilidade das instalações.
 
-Full papers must respect the page limits defined by the conference.
-Conferences that publish just abstracts ask for \textbf{one}-page texts.
+Diante desse contexto, este trabalho propõe a realização de experimentos com simuladores para identificar e avaliar algoritmos, ou combinações destes, que possam superar as soluções atualmente disponíveis, com o objetivo de reduzir o impacto ambiental por meio da minimização das emissões de gases do efeito estufa.
 
 \section{First Page} \label{sec:firstpage}
 
@@ -165,8 +139,7 @@ visible difference in the result.
 \section{References}
 
 Bibliographic references must be unambiguous and uniform.  We recommend giving
-the author names references in brackets, e.g. \cite{knuth:84},
-\cite{boulic:91}, and \cite{smith:99}.
+the author names references in bracket.
 
 The references must be listed using 12 point font size, with 6 points of space
 before each reference. The first line of each reference should not be
