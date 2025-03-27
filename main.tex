@@ -18,6 +18,8 @@
 
 \usepackage{graphicx,url}
 
+\usepackage{chemformula} % para escrever CO2 corretamente
+
 %\usepackage[brazil]{babel}   
 \usepackage[utf8]{inputenc}  
 
@@ -52,22 +54,13 @@ Uma estratégia promissora para mitigar as emissões de gases do efeito estufa n
 
 Diante desse contexto, este trabalho propõe a realização de experimentos com simuladores para identificar e avaliar algoritmos, ou combinações destes, que possam superar as soluções atualmente disponíveis, com o objetivo de reduzir o impacto ambiental por meio da minimização das emissões de gases do efeito estufa.
 
-\section{First Page} \label{sec:firstpage}
+\section{Desafios em simulações cientes de emissões} \label{sec:firstpage}
 
-The first page must display the paper title, the name and address of the
-authors, the abstract in English and ``resumo'' in Portuguese (``resumos'' are
-required only for papers written in Portuguese). The title must be centered
-over the whole page, in 16 point boldface font and with 12 points of space
-before itself. Author names must be centered in 12 point font, bold, all of
-them disposed in the same line, separated by commas and with 12 points of
-space after the title. Addresses must be centered in 12 point font, also with
-12 points of space after the authors' names. E-mail addresses should be
-written using font Courier New, 10 point nominal size, with 6 points of space
-before and 6 points of space after.
+Os simuladores constituem uma ferramenta fundamental para o estudo de sistemas distribuídos, pois permitem reproduzir em ambiente virtual o comportamento de plataformas de grande escala, mitigando os custos e riscos associados a testes em infraestruturas reais. Além de oferecer resultados confiáveis -- corroborados por ampla validação científica --, esses simuladores facilitam a exploração de cenários de difícil acesso prático, bem como a redução de gastos em tempo, dinheiro e energia.
 
-The abstract and ``resumo'' (if is the case) must be in 12 point Times font,
-indented 0.8cm on both sides. The word \textbf{Abstract} and \textbf{Resumo},
-should be written in boldface and must precede the text.
+Quando se busca incorporar a análise de emissões de \ch{CO2}, surgem desafios adicionais. A modelagem do consumo energético requer dados e componentes específicos, capazes de distinguir entre fontes renováveis e não renováveis ou de mensurar o impacto de estratégias de escalonamento na eficiência energética. É frequente a necessidade de módulos externos ou adaptações nos simuladores para avaliação ambiental.
+
+Comparar algoritmos de escalonamento é uma tarefa complexa, pois cada solução pode privilegiar aspectos distintos -- como latência, qualidade de serviço, custo, consumo de energia ou emissões de \ch{CO2} --, adotando modelos e métricas próprias \cite{kumar:19}. Além disso, o fato de esses algoritmos poderem ser testados em diferentes simuladores torna ainda mais difícil obter resultados diretamente comparáveis. Nesse contexto, \textit{frameworks} como o SimGrid \cite{casanova:14} fornecem uma base flexível, centrada em aplicações distribuídas, que pode ser estendida com módulos de análise de emissões. Tal abordagem facilita a investigação de novas estratégias voltadas à otimização de recursos e à redução de impactos ambientais em \textit{data centers}.
 
 \section{CD-ROMs and Printed Proceedings}
 
@@ -76,13 +69,6 @@ abstract is published in the printed Proceedings. In this case, authors are
 invited to prepare two final versions of the paper. One, complete, to be
 published on the CD and the other, containing only the first page, with
 abstract and ``resumo'' (for papers in Portuguese).
-
-\section{Sections and Paragraphs}
-
-Section titles must be in boldface, 13pt, flush left. There should be an extra
-12 pt of space before each title. Section numbering is optional. The first
-paragraph of each section should not be indented, while the first lines of
-subsequent paragraphs should be indented by 1.27 cm.
 
 \subsection{Subsections}
 
@@ -136,14 +122,7 @@ black-and-white images, and 150-300 dpi for grayscale images.  Do not include
 images with excessive resolution, as they may take hours to print, without any
 visible difference in the result. 
 
-\section{References}
-
-Bibliographic references must be unambiguous and uniform.  We recommend giving
-the author names references in bracket.
-
-The references must be listed using 12 point font size, with 6 points of space
-before each reference. The first line of each reference should not be
-indented, while the subsequent should be indented by 0.5 cm.
+\section{Referências}
 
 \bibliographystyle{sbc}
 \bibliography{sbc-template}
