@@ -20,13 +20,13 @@
 
 \usepackage{chemformula} % para escrever CO2 corretamente
 
-%\usepackage[brazil]{babel}   
+\usepackage[brazil]{babel}   
 \usepackage[utf8]{inputenc}  
 
      
 \sloppy
 
-\title{Instructions for Authors of SBC Conferences\\ Papers and Abstracts}
+\title{Migração de VMs como estratégia para \textit{data centers} sustentáveis}
 
 \author{Guilherme Fernandes Moraes da Silva\inst{1}, Daniel Cordeiro\inst{1}}
 
@@ -56,11 +56,13 @@ Diante desse contexto, este trabalho propõe a realização de experimentos com 
 
 \section{Desafios em simulações cientes de emissões} \label{sec:firstpage}
 
-Os simuladores constituem uma ferramenta fundamental para o estudo de sistemas distribuídos, pois permitem reproduzir em ambiente virtual o comportamento de plataformas de grande escala, mitigando os custos e riscos associados a testes em infraestruturas reais. Além de oferecer resultados confiáveis -- corroborados por ampla validação científica --, esses simuladores facilitam a exploração de cenários de difícil acesso prático, bem como a redução de gastos em tempo, dinheiro e energia.
+Uma VM é um ambiente virtualizado criado pelo hipervisor, também conhecido como monitor de máquina virtual (VMM). O VMM gerencia os recursos físicos do sistema anfitrião (a máquina física) e provisiona vários ambientes virtuais independentes, denominados convidados. Dessa forma, a VM atua como uma duplicata isolada e eficiente de uma máquina real, permitindo a execução de sistemas operacionais e aplicações de forma independente e segura, além de evitar conflitos de recursos, como a alocação simultânea da mesma região de memória \cite{popek:74}. A virtualização relaxa as restrições de \textit{hardware}, amplia a flexibilidade do sistema e possibilita maior escalabilidade, facilitando o gerenciamento e o provisionamento de recursos em resposta às demandas dinâmicas da computação moderna \cite{buyya:13}.
 
-Quando se busca incorporar a análise de emissões de \ch{CO2}, surgem desafios adicionais. A modelagem do consumo energético requer dados e componentes específicos, capazes de distinguir entre fontes renováveis e não renováveis ou de mensurar o impacto de estratégias de escalonamento na eficiência energética. É frequente a necessidade de módulos externos ou adaptações nos simuladores para avaliação ambiental.
+Os simuladores, por sua vez, constituem uma ferramenta fundamental para o estudo de sistemas distribuídos, pois permitem reproduzir em ambiente virtual o comportamento de plataformas de grande escala, mitigando os custos e riscos inerentes a testes em infraestruturas reais. Além de fornecer resultados confiáveis -- corroborados por extensa validação científica --, essas ferramentas facilitam a exploração de cenários pouco acessíveis na prática, contribuindo para a redução de gastos em tempo, dinheiro e energia.
 
-Comparar algoritmos de escalonamento é uma tarefa complexa, pois cada solução pode privilegiar aspectos distintos -- como latência, qualidade de serviço, custo, consumo de energia ou emissões de \ch{CO2} --, adotando modelos e métricas próprias \cite{kumar:19}. Além disso, o fato de esses algoritmos poderem ser testados em diferentes simuladores torna ainda mais difícil obter resultados diretamente comparáveis. Nesse contexto, \textit{frameworks} como o ClodSim Plus \cite{silva:17} fornecem uma base flexível, centrada em aplicações distribuídas, que pode ser estendida com módulos de análise de emissões. Tal abordagem facilita a investigação de novas estratégias voltadas à otimização de recursos e à redução de impactos ambientais em \textit{data centers}.
+Quando se busca incorporar a análise de emissões de \ch{CO2}, surgem desafios adicionais. A modelagem do consumo energético requer dados e componentes específicos, capazes de diferenciar fontes renováveis e não renováveis ou de mensurar o impacto de estratégias de escalonamento na eficiência energética. Por vezes, são necessários módulos externos ou adaptações personalizadas nos simuladores para embutir essa avaliação ambiental de forma adequada.
+
+Comparar algoritmos de escalonamento em cenários preocupados com eficiência e sustentabilidade é igualmente complexo, pois cada solução pode privilegiar aspectos distintos -- como latência, qualidade de serviço, custo, consumo de energia ou emissões de \ch{CO2} -- e empregar diferentes modelos e métricas \cite{kumar:19}. O fato de essas abordagens poderem ser testadas em diversos simuladores reforça a dificuldade de obter resultados diretamente comparáveis. Nesse contexto, \textit{frameworks} como o ClodSim Plus \cite{silva:17} oferecem uma base flexível, centrada em aplicações distribuídas, que pode ser expandida com módulos de análise de emissões. Essa arquitetura facilita a exploração de novas estratégias voltadas à otimização de recursos e à redução de impactos ambientais em \textit{data centers}.
 
 \section{Metodologia e resultados preliminares}
 
